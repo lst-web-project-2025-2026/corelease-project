@@ -31,6 +31,32 @@ Corelease utilizes a containerized stack optimized for stability and environment
 
 ---
 
+## Screenshots
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:43:43" src="https://github.com/user-attachments/assets/399d1e2a-e2e4-4921-8bba-1344d10dd4d1" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:43:27" src="https://github.com/user-attachments/assets/056835f8-76c6-44e3-864e-b845b8d61029" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:43:51" src="https://github.com/user-attachments/assets/0e60a2f0-77b9-4ca5-a22a-0857ea78394c" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:43:59" src="https://github.com/user-attachments/assets/4dac5bce-07fc-4b3a-9f24-61a0db559b51" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:44:17" src="https://github.com/user-attachments/assets/9a1f47b9-03f0-4aa0-842f-daf46e1a4c8b" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:45:11" src="https://github.com/user-attachments/assets/5f2afaf2-deca-4017-8240-45119663a726" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:45:23" src="https://github.com/user-attachments/assets/5bace5db-0b49-4a1f-93df-7f6c2b1109bf" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:45:31" src="https://github.com/user-attachments/assets/5da2854f-3231-4d19-a50e-de60635794d9" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:46:19" src="https://github.com/user-attachments/assets/e2f03435-78ed-4ff5-b84f-751c84e95db2" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:46:52" src="https://github.com/user-attachments/assets/65894a94-a256-4b53-876d-a85d57ee5333" />
+
+<img width="1920" height="1026" alt="Screenshot_2026,01,28_23:47:29" src="https://github.com/user-attachments/assets/9bc73962-b135-45a9-a8d8-4e05f2700671" />
+
+---
+
 ## Developer Setup and Environment Configuration
 
 The Following instructions outline the procedure for establishing a bit-identical development environment using the provided Docker orchestration and VS Code Dev Containers configuration.

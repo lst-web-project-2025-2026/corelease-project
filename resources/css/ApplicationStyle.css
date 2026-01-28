@@ -1,0 +1,119 @@
+/* BASE */
+* {
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #eef1f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 36px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* TITLE */
+h1 {
+    text-align: left;
+    margin: 0 0 28px 0;
+    font-size: 24px;
+    color: #1f2937;
+}
+
+/* FORM GROUP */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* LABEL */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6b7280;
+}
+
+/* INPUTS */
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    background-color: #fafafa;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #ffffff;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: vertical;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #111827;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+/* SUCCESS */
+.alert-success {
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #ecfeff;
+    color: #0f766e;
+    border-left: 4px solid #14b8a6;
+    font-size: 14px;
+}
+
+/* ERROR */
+.alert-error {
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #fff1f2;
+    color: #9f1239;
+    border-left: 4px solid #fb7185;
+    font-size: 14px;
+}
+
+.alert-error ul {
+    margin: 0;
+    padding-left: 18px;
+}

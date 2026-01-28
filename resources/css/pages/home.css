@@ -1,0 +1,237 @@
+.landing-page {
+    position: relative;
+    overflow: hidden;
+    /* Contains the glow locally to this page */
+}
+
+.hero {
+    padding: 10rem 0 6rem;
+    /* Expanded padding */
+    position: relative;
+    text-align: center;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    top: -10em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 50rem;
+    background: radial-gradient(
+        30em circle at center,
+        var(--accent-glow) 0%,
+        transparent 70%
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    /* Tighter letter spacing for premium look */
+    margin-bottom: var(--space-md);
+    background: linear-gradient(180deg, #fff 0%, #aaa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .hero-title {
+    background: linear-gradient(180deg, #111 0%, #444 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    color: var(--text-secondary);
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.btn-lg {
+    padding: 0.8em 2.5em;
+    font-size: 1.125rem;
+}
+
+/* Live Status Section */
+.live-status {
+    padding: 4rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.status-grid {
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: 1fr;
+    animation-delay: 0.2s;
+}
+
+@media (min-width: 35em) {
+    .status-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 64em) {
+    .status-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.status-card {
+    text-align: center;
+}
+
+.status-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    margin-bottom: var(--space-xs);
+}
+
+.status-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-green .status-value {
+    color: var(--success);
+}
+
+.status-red .status-value {
+    color: var(--error);
+}
+
+/* Feature Grid */
+.features {
+    padding: 4rem 0;
+}
+
+.features-grid {
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 50em) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-item {
+    padding: var(--space-xl);
+    border-radius: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-standard);
+}
+
+.feature-item:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-0.25rem);
+}
+
+.feature-item h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.feature-link {
+    display: inline-block;
+    color: var(--accent-primary);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    margin-top: var(--space-sm);
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--border-color),
+        transparent
+    );
+    margin: var(--space-xl) auto;
+}
+
+/* Status Checker Section */
+.status-checker {
+    padding: 4rem 0;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.status-form {
+    padding: 3rem;
+    border-radius: 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.status-result {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--bg-primary);
+    border-left: 4px solid var(--accent-primary);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.result-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.status-badge-pending {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.status-badge-approved {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.status-badge-rejected {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.justification-box {
+    background: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    border: 1px dashed var(--border-color);
+}

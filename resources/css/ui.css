@@ -1,0 +1,16 @@
+@import "./ui/buttons.css";
+@import "./ui/cards.css";
+@import "./ui/forms.css";
+@import "./ui/badges.css";
+@import "./ui/modals.css";
+@import "./ui/alerts.css";
+@import "./ui/loaders.css";
+@import "./ui/pagination.css";
+
+/* User Profile in Navbar (Small utility kept here for now or can be moved) */
+.user-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+  pointer-events: none;
+}

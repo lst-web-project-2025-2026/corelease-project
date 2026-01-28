@@ -1,0 +1,58 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: corelease_app
+    stdin_open: true
+    tty: true
+    ports:
+      - "8000:80"
+      - "5173:5173"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - corelease_net
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.4
+    container_name: corelease_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: corelease_db
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_USER: dev_user
+      MYSQL_PASSWORD: dev_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - corelease_net
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: corelease_pma
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root_password
+    networks:
+      - corelease_net
+
+networks:
+  corelease_net:
+    driver: bridge
+
+volumes:
+  db_data:

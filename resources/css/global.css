@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap");
+
+:root {
+    /* Accent Color - HSL for dynamic control */
+    --accent-h: 217;
+    /* Blue default */
+    --accent-s: 91%;
+    --accent-l: 60%;
+
+    --accent-primary: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --accent-secondary: hsl(var(--accent-h),
+            var(--accent-s),
+            calc(var(--accent-l) + 10%));
+    --accent-glow: hsla(var(--accent-h),
+            var(--accent-s),
+            var(--accent-l),
+            0.15);
+    --accent-gradient: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+
+    /* Spacing */
+    --space-xs: 0.25rem;
+    /* 4px */
+    --space-sm: 0.5rem;
+    /* 8px */
+    --space-md: 1rem;
+    /* 16px */
+    --space-lg: 1.5rem;
+    /* 24px */
+    --space-xl: 2rem;
+    /* 32px */
+    --space-2xl: 4rem;
+    /* 64px */
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-standard: 0.3s ease;
+
+    /* Typography */
+    --font-heading: "Outfit", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    /* Base Shadows */
+    --glass-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Theme (Default) */
+:root,
+[data-theme="dark"] {
+    --bg-primary: #0a0a0c;
+    --bg-secondary: #141417;
+    --bg-tertiary: #1c1c21;
+
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+
+    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(20, 20, 23, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.12);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: #f9fafb;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f3f4f6;
+
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+
+    --border-color: rgba(0, 0, 0, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.5);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.05);
+
+    --accent-l: 50%;
+}
+
+/* Semantic Colors */
+:root {
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+}
+
+/* Base Resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition:
+        background-color var(--transition-standard),
+        color var(--transition-standard);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Core Container */
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    width: 95%;
+    /* Ensure it takes full width on small screens */
+}
+
+/* Global Helpers */
+.text-center {
+    text-align: center;
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0.625rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn var(--transition-standard) forwards;
+}

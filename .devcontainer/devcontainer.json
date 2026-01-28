@@ -1,0 +1,30 @@
+{
+    "name": "Corelease Dev Environment",
+    "dockerComposeFile": [
+        "../compose.yaml"
+    ],
+    "service": "app",
+    "workspaceFolder": "/var/www/html",
+    "remoteUser": "dev",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "php.validate.executablePath": "/usr/bin/php",
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "laravel.laravel-pint"
+            },
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "amiralizadeh94.laravel-extra-intellisense",
+                "onecentlin.laravel-blade",
+                "onecentlin.laravel5-snippets",
+                "ryannatividad.laravel-goto-view",
+                "laravel.laravel-pint",
+                "shufo.vscode-blade-formatter",
+                "mikestead.dotenv",
+                "adpyke.vscode-sql-formatter"
+            ]
+        }
+    },
+    "shutdownAction": "stopCompose"
+}

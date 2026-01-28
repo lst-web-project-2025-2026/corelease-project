@@ -1,0 +1,117 @@
+.auth-page {
+    min-height: calc(100vh - 120px);
+    /* Adjust based on navbar/footer height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl) 0;
+    position: relative;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    z-index: 1;
+}
+
+.auth-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(0.75rem);
+    -webkit-backdrop-filter: blur(0.75rem);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    box-shadow: var(--glass-shadow);
+    padding: var(--space-xl);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.auth-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-xs);
+}
+
+.auth-subtitle {
+    font-size: 0.9375rem;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: var(--space-lg);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.auth-footer a {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Background Glow for Auth */
+.auth-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Multi-step logic styles */
+.step-container {
+    display: none;
+}
+
+.step-container.active {
+    display: block;
+    animation: fadeIn var(--transition-standard) forwards;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    transition: all var(--transition-standard);
+}
+
+.step-dot.active {
+    background: var(--accent-primary);
+    transform: scale(1.2);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.auth-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.auth-actions-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.auth-actions-row .btn {
+    flex: 1;
+}

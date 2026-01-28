@@ -1,0 +1,89 @@
+/* Button Component */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6em 1.25em;
+  border-radius: 0.625rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  transition: all var(--transition-fast);
+  gap: 0.5em;
+  text-align: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-secondary);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.btn-secondary {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--text-muted);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent-glow);
+}
+
+.btn-outline-info {
+  background-color: transparent;
+  border-color: var(--info);
+  color: var(--info) !important;
+}
+
+.btn-outline-info:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.btn-outline-accent {
+  background-color: transparent;
+  border-color: var(--accent-primary);
+  color: var(--accent-primary) !important;
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--accent-glow);
+}
+
+.btn-outline-error {
+  background-color: transparent;
+  border-color: var(--error);
+  color: var(--error) !important;
+}
+
+.btn-outline-error:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.btn-sm {
+  padding: 0.4em 0.8em;
+  font-size: 0.8125rem;
+}

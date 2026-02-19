@@ -29,7 +29,7 @@ class ApplicationService
                 'status' => 'Pending',
             ]);
 
-            $this->auditService.log(null, 'application_submitted', $application, null, $application->toArray());
+            $this->auditService->log(null, 'application_submitted', $application, null, $application->toArray());
 
             return $application;
         });

@@ -41,7 +41,7 @@
                     @endif
                 </div>
             @else
-                <h1 class="hero-title">High-Performance Computing for Internal Research</h1>
+                <h1 class="hero-title">Reliable Computing for Internal Research</h1>
                 <p class="hero-subtitle text-secondary">Corelease provides transparent access to data center nodes, virtual machines, and specialized hardware for authorized research groups and personnel.</p>
 
                 <div class="hero-actions">
